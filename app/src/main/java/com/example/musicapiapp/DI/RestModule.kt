@@ -41,4 +41,7 @@ class RestModule {
         .readTimeout(30,TimeUnit.SECONDS)
         .writeTimeout(30,TimeUnit.SECONDS)
         .build()
+
+//    @Provides
+//    fun provideCompositeDisposable()
 }

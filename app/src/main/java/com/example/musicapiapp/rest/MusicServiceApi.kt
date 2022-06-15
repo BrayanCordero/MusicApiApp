@@ -7,7 +7,7 @@ import retrofit2.http.GET
 interface MusicServiceApi {
 
     @GET(CLASSICAL_PATH)
-    fun getClassicalMusic(): Single<MusicResponse>
+    fun getAllClassicalMusic(): Single<MusicResponse>
 
     companion object{
         const val BASE_URL = "https://itunes.apple.com/"
