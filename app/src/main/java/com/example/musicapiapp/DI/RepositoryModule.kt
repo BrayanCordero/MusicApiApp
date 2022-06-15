@@ -24,10 +24,3 @@ abstract class RepositoryModule {
         networkRepositoryImpl: LocalDataRepositoryImpl
     ): MusicRepository
 }
-
-//@Module
-//abstract class PresenterModule {
-//
-//    @Binds
-//    abstract fun provideClassicalPresenter(musicPresenterContract: MusicPresenterContract):
-//}

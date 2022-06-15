@@ -4,6 +4,7 @@ import com.example.musicapiapp.rest.MusicServiceApi
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
+import io.reactivex.disposables.CompositeDisposable
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -42,6 +43,7 @@ class RestModule {
         .writeTimeout(30,TimeUnit.SECONDS)
         .build()
 
-//    @Provides
-//    fun provideCompositeDisposable()
+    @Provides
+    fun provideCompositeDisposable():CompositeDisposable =
+        CompositeDisposable()
 }

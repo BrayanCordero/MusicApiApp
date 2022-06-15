@@ -5,10 +5,12 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-class PresentersModule {
+abstract class PresentersModule {
 
-//    @Binds
-//    abstract fun providesAllClassicalPresenter(
-//        allClassicalPresenter: AllClassicalPresenter
-//    )
+    @Binds
+    abstract fun providesAllClassicalPresenter(
+        allClassicalPresenter: AllClassicalPresenter
+    ):AllClassicalPresenter
+
+    //add all presenter that will be needed in thi app here
 }
