@@ -12,17 +12,17 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/home_fragment_to_classical_fragment"
+            android:id="@+id/action_home_fragment_to_classical_fragment"
             app:destination="@id/Classical_Fragment">
         </action>
 
         <action
-            android:id="@+id/home_fragment_to_rock_fragment"
+            android:id="@+id/action_home_fragment_to_rock_fragment"
             app:destination="@id/Rock_Fragment">
         </action>
 
         <action
-            android:id="@+id/home_fragment_to_pop_fragment"
+            android:id="@+id/action_home_fragment_to_pop_fragment"
             app:destination="@id/Pop_Fragment">
         </action>
 

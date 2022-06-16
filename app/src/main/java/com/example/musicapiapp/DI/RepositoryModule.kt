@@ -4,6 +4,7 @@ import com.example.musicapiapp.database.LocalDataRepository
 import com.example.musicapiapp.database.LocalDataRepositoryImpl
 
 import com.example.musicapiapp.rest.MusicRepository
+import com.example.musicapiapp.rest.MusicRepositoryImpl
 
 import dagger.Binds
 import dagger.Module
@@ -21,6 +22,6 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun providesNetworkRepository(
-        networkRepositoryImpl: MusicRepository
+        networkRepositoryImpl: MusicRepositoryImpl
     ): MusicRepository
 }

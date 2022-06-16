@@ -17,7 +17,6 @@ class ApplicationModule(private val application: Application) {
     fun providesContext(): Context = application.applicationContext
 
     @Provides
-    @Singleton
     fun provideRoomDb(context: Context): MusicDatabase =
         Room.databaseBuilder(
             context,
