@@ -32,9 +32,9 @@ class ClassicalFragment : Fragment(), ClassicalMusicViewContract{
         TODO("Not yet implemented")
     }
 
-    override fun connectionChecked() {
-        TODO("Not yet implemented")
-    }
+//    override fun connectionChecked() {
+//        TODO("Not yet implemented")
+//    }
 
     override fun allMusicLoadedSuccess(music: List<DomainMusic>, isOffline: Boolean) {
         //set recycler view adapter here with new data

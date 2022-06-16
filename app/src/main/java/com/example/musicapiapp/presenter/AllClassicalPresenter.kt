@@ -24,9 +24,10 @@ class AllClassicalPresenter @Inject constructor(
         musicViewContract = viewContract
     }
 
-    //register network state updates
+//    register network state updates
     override fun registerForNetworkState() {
-        musicRepository.checkNetworkAvailability()
+        TODO("NOT YET IMPLEMENTED")
+//        musicRepository.checkNetworkAvailability()
     }
 
     override fun getAllClassicalMusic() {
@@ -86,7 +87,7 @@ interface ClassicalMusicViewContract{
 
 
     //extra method while checking for connection
-    fun connectionChecked()
+//    fun connectionChecked()
 
     //This will update the UI with the success response
     //implement in fragment or activity that will display this to user

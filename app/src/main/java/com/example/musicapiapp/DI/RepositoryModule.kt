@@ -21,6 +21,6 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun providesNetworkRepository(
-        networkRepositoryImpl: LocalDataRepositoryImpl
+        networkRepositoryImpl: MusicRepository
     ): MusicRepository
 }

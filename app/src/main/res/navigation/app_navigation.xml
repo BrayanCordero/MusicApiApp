@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/Home_Fragment">
+
+    <fragment
+        android:id="@+id/Home_Fragment"
+        android:name="com.example.musicapiapp.ui.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/home_fragment_to_classical_fragment"
+            app:destination="@id/Classical_Fragment">
+        </action>
+
+        <action
+            android:id="@+id/home_fragment_to_rock_fragment"
+            app:destination="@id/Rock_Fragment">
+        </action>
+
+        <action
+            android:id="@+id/home_fragment_to_pop_fragment"
+            app:destination="@id/Pop_Fragment">
+        </action>
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/Classical_Fragment"
+        android:name="com.example.musicapiapp.ui.ClassicalFragment"
+        android:label="Classical Fragment"
+        tools:layout="@layout/fragment_classical">
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/Rock_Fragment"
+        android:name="com.example.musicapiapp.ui.RockFragment"
+        android:label="Rock Fragment"
+        tools:layout="@layout/fragment_rock">
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/Pop_Fragment"
+        android:name="com.example.musicapiapp.ui.PopFragment"
+        android:label="Pop Fragment"
+        tools:layout="@layout/fragment_pop">
+
+    </fragment>
+
+
+
+
+</navigation>
