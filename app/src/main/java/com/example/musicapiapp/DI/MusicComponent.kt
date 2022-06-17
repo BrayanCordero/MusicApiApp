@@ -2,7 +2,6 @@ package com.example.musicapiapp.DI
 
 import com.example.musicapiapp.MainActivity
 import com.example.musicapiapp.ui.ClassicalFragment
-import com.example.musicapiapp.ui.HomeFragment
 import com.example.musicapiapp.ui.PopFragment
 import com.example.musicapiapp.ui.RockFragment
 import dagger.Component
@@ -20,7 +19,6 @@ interface MusicComponent {
 
     fun inject(mainActivity: MainActivity)
     fun inject(classicalFragment: ClassicalFragment)
-    fun inject(homeFragment: HomeFragment)
     fun inject(rockFragment: RockFragment)
     fun inject(popFragment: PopFragment)
 }

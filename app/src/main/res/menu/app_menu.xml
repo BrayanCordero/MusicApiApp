@@ -3,8 +3,18 @@
 
 
     <item
-        android:id="@+id/MainFragment"
-        android:title="HOME"
-        android:icon="@drawable/ic_baseline_home_24"/>
+        android:id="@+id/ClassicalFragment"
+        android:title="CLASSICAL"
+        android:icon="@drawable/classical_icon"/>
+
+    <item
+        android:id="@+id/RockFragment"
+        android:title="ROCK"
+        android:icon="@drawable/rock_icon"/>
+
+    <item
+        android:id="@+id/PopFragment"
+        android:title="POP"
+        android:icon="@drawable/pop_icon"/>
 
 </menu>

@@ -8,4 +8,5 @@ data class MusicResponse(
     val resultCount: Int?,
     @SerializedName("results")
     val music: List<Music>
+
 )
