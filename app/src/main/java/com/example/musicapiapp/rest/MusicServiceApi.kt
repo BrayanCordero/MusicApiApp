@@ -12,5 +12,7 @@ interface MusicServiceApi {
     companion object{
         const val BASE_URL = "https://itunes.apple.com/"
         private const val CLASSICAL_PATH = "search?term=classical&amp"
+//        private const val ROCK_PATH =
+
     }
 }

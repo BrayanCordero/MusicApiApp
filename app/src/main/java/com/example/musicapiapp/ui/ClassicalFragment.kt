@@ -1,22 +1,22 @@
 package com.example.musicapiapp.ui
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.musicapiapp.MusicApp
 import com.example.musicapiapp.R
 import com.example.musicapiapp.adapter.MusicAdapter
 import com.example.musicapiapp.adapter.MusicItemClick
 import com.example.musicapiapp.databinding.FragmentClassicalBinding
+import com.example.musicapiapp.databinding.FragmentDetailsBinding
 import com.example.musicapiapp.domain.DomainMusic
-import com.example.musicapiapp.model.Music
-import com.example.musicapiapp.presenter.AllClassicalPresenter
+import com.example.musicapiapp.model.MusicInfo
 import com.example.musicapiapp.presenter.ClassicalMusicPresenterContract
 import com.example.musicapiapp.presenter.ClassicalMusicViewContract
 import javax.inject.Inject
@@ -36,15 +36,20 @@ class ClassicalFragment : Fragment(), ClassicalMusicViewContract{
 //        MusicApp.component.inject(this)
 //    }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        MusicApp.component.inject(this)
-    }
+//    override fun onAttach(context: Context) {
+//        super.onAttach(context)
+//        MusicApp.component.inject(this)
+//    }
 
     private val musicAdapter by lazy{
         MusicAdapter(object : MusicItemClick{
-            override fun onMusicClicked(music: Music) {
-                Log.d(TAG,"onMusicClick:${music.artistName}")
+            override fun onMusicClicked(music: DomainMusic) {
+                val musicInfo = MusicInfo(music.artistName,music.trackName,music.albumCover,music.releaseDate,music.preview,music.trackPrice,
+                music.trackPrice,music.collectionName,music.country,music.trackNumber,music.trackCount)
+                findNavController().navigate(R.id.action_navigation_Classical_Fragment_to_navigation_Details_Fragment, bundleOf(
+                    Pair(DetailsFragment.MUSIC_DATA, musicInfo)
+                )
+                )
             }
         })
     }
@@ -60,10 +65,12 @@ class ClassicalFragment : Fragment(), ClassicalMusicViewContract{
             adapter = musicAdapter
         }
 
+        MusicApp.component.inject(this)
 
         classicalPresenter.initializePresenter(this)
 
         classicalPresenter.getAllClassicalMusic()
+
 
 
         return binding.root
@@ -95,5 +102,6 @@ class ClassicalFragment : Fragment(), ClassicalMusicViewContract{
         super.onDestroyView()
         classicalPresenter.destroyPresenter()
     }
+
 
 }

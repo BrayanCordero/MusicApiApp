@@ -3,17 +3,17 @@
 
 
     <item
-        android:id="@+id/ClassicalFragment"
+        android:id="@+id/navigation_Classical_Fragment"
         android:title="CLASSICAL"
         android:icon="@drawable/classical_icon"/>
 
     <item
-        android:id="@+id/RockFragment"
+        android:id="@+id/navigation_Rock_Fragment"
         android:title="ROCK"
         android:icon="@drawable/rock_icon"/>
 
     <item
-        android:id="@+id/PopFragment"
+        android:id="@+id/navigation_Pop_Fragment"
         android:title="POP"
         android:icon="@drawable/pop_icon"/>
 

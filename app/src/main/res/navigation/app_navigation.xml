@@ -3,54 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_navigation"
-    app:startDestination="@id/Classical_Fragment">
+    app:startDestination="@id/navigation_Classical_Fragment">
 
 
     <fragment
-        android:id="@+id/Classical_Fragment"
+        android:id="@+id/navigation_Classical_Fragment"
         android:name="com.example.musicapiapp.ui.ClassicalFragment"
         android:label="Classical Fragment"
         tools:layout="@layout/fragment_classical">
 
         <action
-            android:id="@+id/action_Classical_Fragment_to_Pop_Fragment"
-            app:destination="@id/Pop_Fragment" />
-        <action
-            android:id="@+id/action_Classical_Fragment_to_Rock_Fragment"
-            app:destination="@id/Rock_Fragment" />
+            android:id="@+id/action_navigation_Classical_Fragment_to_navigation_Details_Fragment"
+            app:destination="@id/navigation_Details_Fragment" />
     </fragment>
 
-
-
     <fragment
-        android:id="@+id/Rock_Fragment"
+        android:id="@+id/navigation_Rock_Fragment"
         android:name="com.example.musicapiapp.ui.RockFragment"
         android:label="Rock Fragment"
         tools:layout="@layout/fragment_rock">
-
         <action
-            android:id="@+id/action_Rock_Fragment_to_Classical_Fragment"
-            app:destination="@id/Classical_Fragment" />
-        <action
-            android:id="@+id/action_Rock_Fragment_to_Pop_Fragment"
-            app:destination="@id/Pop_Fragment" />
+            android:id="@+id/action_navigation_Rock_Fragment_to_navigation_Details_Fragment"
+            app:destination="@id/navigation_Details_Fragment" />
     </fragment>
 
-
-
     <fragment
-        android:id="@+id/Pop_Fragment"
+        android:id="@+id/navigation_Pop_Fragment"
         android:name="com.example.musicapiapp.ui.PopFragment"
         android:label="Pop Fragment"
         tools:layout="@layout/fragment_pop">
-
         <action
-            android:id="@+id/action_Pop_Fragment_to_Rock_Fragment"
-            app:destination="@id/Rock_Fragment" />
-        <action
-            android:id="@+id/action_Pop_Fragment_to_Classical_Fragment"
-            app:destination="@id/Classical_Fragment" />
+            android:id="@+id/action_navigation_Pop_Fragment_to_navigation_Details_Fragment"
+            app:destination="@id/navigation_Details_Fragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_Details_Fragment"
+        android:name="com.example.musicapiapp.ui.DetailsFragment"
+        android:label="Details Fragment"
+        tools:layout="@layout/fragment_details"/>
 
 
 

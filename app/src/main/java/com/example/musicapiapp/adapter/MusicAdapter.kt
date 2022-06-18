@@ -45,8 +45,17 @@ class MusicViewHolder(
     fun bind(music: DomainMusic, onMusicItemClick: MusicItemClick){
         binding.artisName.text = music.artistName
         binding.trackName.text = music.trackName
-        binding.trackPrice.text = music.trackPrice.toString()
 
+        if(music!!.trackPrice<0.00){
+            binding.trackPrice.text ="FREE"
+        }
+        else{
+            binding.trackPrice.text= music?.trackPrice.toString()
+        }
+
+        itemView.setOnClickListener{
+            onMusicItemClick.onMusicClicked(music)
+        }
 
 
         //getting the image from url and binding it to the cover
@@ -58,5 +67,5 @@ class MusicViewHolder(
 }
 
 interface MusicItemClick{
-    fun onMusicClicked(music:Music)
+    fun onMusicClicked(music:DomainMusic)
 }
