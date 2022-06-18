@@ -17,6 +17,7 @@ class AllClassicalPresenter @Inject constructor(
     private val localMusicRepository: LocalDataRepository
 ): ClassicalMusicPresenterContract {
 
+
     private var musicViewContract: ClassicalMusicViewContract?=null
 
     //initializing presenter and passing reference for the view contract interface below

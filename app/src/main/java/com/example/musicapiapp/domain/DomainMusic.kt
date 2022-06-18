@@ -19,7 +19,8 @@ data class DomainMusic(
     val collectionName: String,
     val country: String,
     val trackNumber: Int,
-    val trackCount: Int
+    val trackCount: Int,
+    val genre: String
 
 
     //add fields that you need here then below map it to the api fields.
@@ -44,7 +45,8 @@ fun List<Music>.mapToDomainMusic():List<DomainMusic>{
             collectionName = networkMusic.collectionName?:"unknown",
             country = networkMusic.country?: "not available",
             trackNumber = networkMusic.trackNumber?: 99999,
-            trackCount = networkMusic.trackCount?:9999999
+            trackCount = networkMusic.trackCount?:9999999,
+            genre = networkMusic.primaryGenreName?:"not available"
         )
     }
 }

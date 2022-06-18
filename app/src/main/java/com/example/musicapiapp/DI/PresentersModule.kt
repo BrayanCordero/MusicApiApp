@@ -1,8 +1,6 @@
 package com.example.musicapiapp.DI
 
-import com.example.musicapiapp.presenter.AllClassicalPresenter
-import com.example.musicapiapp.presenter.ClassicalMusicPresenterContract
-import com.example.musicapiapp.presenter.ClassicalMusicViewContract
+import com.example.musicapiapp.presenter.*
 import dagger.Binds
 import dagger.Module
 
@@ -13,6 +11,11 @@ abstract class PresentersModule {
     abstract fun providesAllClassicalPresenter(
         allClassicalPresenter: AllClassicalPresenter
     ): ClassicalMusicPresenterContract
+
+    @Binds
+    abstract fun providesAllRockPresenter(
+        allRockPresenter: AllRockPresenter
+    ):RockMusicPresenterContract
 
     //add all presenter that will be needed in thi app here
 }

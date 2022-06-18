@@ -21,7 +21,7 @@ import com.example.musicapiapp.presenter.ClassicalMusicPresenterContract
 import com.example.musicapiapp.presenter.ClassicalMusicViewContract
 import javax.inject.Inject
 
-private const val TAG = "AllMusicFragment"
+
 class ClassicalFragment : Fragment(), ClassicalMusicViewContract{
 
     private val binding by lazy{
