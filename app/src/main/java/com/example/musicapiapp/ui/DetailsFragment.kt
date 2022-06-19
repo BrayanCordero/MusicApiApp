@@ -16,6 +16,7 @@ import com.example.musicapiapp.databinding.FragmentClassicalBinding
 import com.example.musicapiapp.databinding.FragmentDetailsBinding
 import com.example.musicapiapp.model.MusicInfo
 import java.io.IOException
+import java.text.SimpleDateFormat
 
 
 class DetailsFragment : Fragment() {
@@ -40,6 +41,7 @@ class DetailsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
+
         binding.artisName.text = musicInfo?.artistName
         binding.trackName.text = musicInfo?.trackName
         if(musicInfo!!.trackPrice<0.00){
@@ -50,6 +52,10 @@ class DetailsFragment : Fragment() {
         }
 
         binding.releaseDate.text = musicInfo?.releaseDate
+        binding.collectionName.text = musicInfo?.collectionName
+        binding.collectionPrice.text = musicInfo?.collectionPrice.toString()
+        binding.trackCount.text=musicInfo?.trackCount.toString()
+        binding.countryName.text=musicInfo?.country
 
 
         Glide.with(binding.root)
@@ -77,6 +83,7 @@ class DetailsFragment : Fragment() {
         mediaPlayer = null
 
     }
+
 
     private fun playSong(url:String?){
        if(url!=null){

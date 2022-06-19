@@ -70,10 +70,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="48dp"
         android:text="RELEASE DATE"
         app:layout_constraintStart_toEndOf="@+id/release_date_text"
-        app:layout_constraintTop_toBottomOf="@+id/price_text" />
+        app:layout_constraintTop_toBottomOf="@+id/album_cover" />
 
     <TextView
         android:id="@+id/release_date_text"
@@ -89,13 +89,93 @@
         android:id="@+id/play_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="112dp"
         android:text="PLAY PREVIEW"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country_name" />
+
+    <TextView
+        android:id="@+id/collection_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="COLLECTION:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/release_date_text" />
+
+    <TextView
+        android:id="@+id/collection_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="COLLECTION NAME"
+        app:layout_constraintStart_toEndOf="@+id/collection_text"
         app:layout_constraintTop_toBottomOf="@+id/release_date" />
 
-<!--    <Button-->
+    <TextView
+        android:id="@+id/collection_price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="COLLECTION PRICE:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collection_text" />
+
+    <TextView
+        android:id="@+id/collection_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="COLLECTION PRICE"
+        app:layout_constraintStart_toEndOf="@+id/collection_price_text"
+        app:layout_constraintTop_toBottomOf="@+id/collection_name" />
+
+    <TextView
+        android:id="@+id/track_count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="TRACK COUNT:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collection_price_text" />
+
+    <TextView
+        android:id="@+id/track_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="TRACK COUNT"
+        app:layout_constraintStart_toEndOf="@+id/track_count_text"
+        app:layout_constraintTop_toBottomOf="@+id/collection_price_text" />
+
+    <TextView
+        android:id="@+id/country_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="COUNTRY:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/track_count_text" />
+
+    <TextView
+        android:id="@+id/country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="COUNTRY"
+        app:layout_constraintStart_toEndOf="@+id/country_text"
+        app:layout_constraintTop_toBottomOf="@+id/track_count" />
+
+    <!--    <Button-->
 <!--        android:id="@+id/pause_btn"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->

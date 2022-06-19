@@ -46,6 +46,7 @@ class MusicViewHolder(
         binding.artisName.text = music.artistName
         binding.trackName.text = music.trackName
 
+
         if(music!!.trackPrice<0.00){
             binding.trackPrice.text ="FREE"
         }
