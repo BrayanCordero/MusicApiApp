@@ -34,7 +34,7 @@ class RockFragment : Fragment(), RockMusicViewContract {
             override fun onMusicClicked(music: DomainMusic) {
                 val musicInfo = MusicInfo(music.artistName,music.trackName,music.albumCover,music.releaseDate,music.preview,music.trackPrice,
                     music.trackPrice,music.collectionName,music.country,music.trackNumber,music.trackCount)
-                findNavController().navigate(R.id.action_navigation_Classical_Fragment_to_navigation_Details_Fragment, bundleOf(
+                findNavController().navigate(R.id.action_navigation_Rock_Fragment_to_navigation_Details_Fragment, bundleOf(
                     Pair(DetailsFragment.MUSIC_DATA, musicInfo)
                 )
                 )

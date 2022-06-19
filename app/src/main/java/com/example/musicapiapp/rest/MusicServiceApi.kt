@@ -13,6 +13,9 @@ interface MusicServiceApi {
     @GET(ROCK_PATH)
     fun getAllRockMusic():Single<MusicResponse>
 
+    @GET(POP_PATH)
+    fun getAllPopMusic():Single<MusicResponse>
+
     companion object{
         const val BASE_URL = "https://itunes.apple.com/"
         private const val CLASSICAL_PATH = "search?term=classical&amp"

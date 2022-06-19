@@ -13,6 +13,7 @@ interface MusicRepository {
 //    val networkState:BehaviorSubject<Boolean>
     fun getAllClassicalMusic(): Single<MusicResponse>
 //    fun checkNetworkAvailability()
+    fun getAllPopMusic():Single<MusicResponse>
 
     fun getAllRockMusic():Single<MusicResponse>
 }
@@ -25,6 +26,10 @@ class MusicRepositoryImpl @Inject constructor(
 
     override fun getAllClassicalMusic(): Single<MusicResponse> {
         return serviceApi.getAllClassicalMusic()
+    }
+
+    override fun getAllPopMusic(): Single<MusicResponse> {
+        return serviceApi.getAllPopMusic()
     }
 
     override fun getAllRockMusic(): Single<MusicResponse> {

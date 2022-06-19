@@ -17,5 +17,10 @@ abstract class PresentersModule {
         allRockPresenter: AllRockPresenter
     ):RockMusicPresenterContract
 
+    @Binds
+    abstract fun providesAllPopPresenter(
+        allPopPresenter:AllPopPresenter
+    ):PopMusicPresenterContract
+
     //add all presenter that will be needed in thi app here
 }

@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.musicapiapp.R
 import com.example.musicapiapp.databinding.FragmentClassicalBinding
@@ -67,8 +69,10 @@ class DetailsFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onDestroyView() {
         super.onDestroyView()
+        mediaPlayer?.stop()
         mediaPlayer?.release()
         mediaPlayer = null
 

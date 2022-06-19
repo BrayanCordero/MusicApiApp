@@ -23,6 +23,9 @@ interface MusicDAO {
     @Query("SELECT*FROM music_table WHERE genre IN('Rock','Alternative','Pop/Rock')")
     fun getAllRockMusic(): Single<List<DomainMusic>>
 
-    @Query("SELECT*FROM music_table WHERE genre In('Classical')")
+    @Query("SELECT*FROM music_table WHERE genre IN('Classical')")
     fun getAllClassicalMusic(): Single<List<DomainMusic>>
+
+    @Query("SELECT*FROM music_table WHERE genre IN('Pop')")
+    fun getAllPopMusic():Single<List<DomainMusic>>
 }

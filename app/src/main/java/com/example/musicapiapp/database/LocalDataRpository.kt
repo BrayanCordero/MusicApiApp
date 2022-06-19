@@ -11,6 +11,7 @@ interface LocalDataRepository{
     fun insertMusic(music : List<DomainMusic>): Completable
     fun getMusicById(musicId: Int) : Single<DomainMusic>
     fun getAllRockMusic():Single<List<DomainMusic>>
+    fun getAllPopMusic():Single<List<DomainMusic>>
 }
 class LocalDataRepositoryImpl @Inject constructor(
     private val musicDAO: MusicDAO
@@ -31,5 +32,9 @@ class LocalDataRepositoryImpl @Inject constructor(
 
     override fun getAllRockMusic(): Single<List<DomainMusic>> {
         return musicDAO.getAllRockMusic()
+    }
+
+    override fun getAllPopMusic(): Single<List<DomainMusic>> {
+        return musicDAO.getAllPopMusic()
     }
 }
