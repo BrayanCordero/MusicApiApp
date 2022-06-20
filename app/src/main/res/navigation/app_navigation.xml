@@ -41,7 +41,14 @@
         android:id="@+id/navigation_Details_Fragment"
         android:name="com.example.musicapiapp.ui.DetailsFragment"
         android:label="Details Fragment"
-        tools:layout="@layout/fragment_details"/>
+        tools:layout="@layout/fragment_details">
+        <action
+            android:id="@+id/action_navigation_Details_Fragment_to_navigation_Classical_Fragment"
+            app:destination="@id/navigation_Classical_Fragment" />
+        <action
+            android:id="@+id/action_navigation_Details_Fragment_to_navigation_Pop_Fragment"
+            app:destination="@id/navigation_Pop_Fragment" />
+    </fragment>
 
 
 
